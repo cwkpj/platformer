@@ -11,5 +11,5 @@ class SpriteSheet:
         # create a blank image
         img = pygame.Surface([width, height]).convert()
         img.blit(self.sprite_sheet, (0, 0), (x, y, width, height))
-        img.set_colorkey((   0,   0,   0))
+        img.set_colorkey(img.get_at((0, 0)))
         return img
